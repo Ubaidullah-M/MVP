@@ -1,0 +1,163 @@
+:root {
+    --txt: #1F5A96;
+    --bg: #ABEDEB;
+    --span: #ff12ed;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-size: 16px;
+/*    background: linear-gradient(45deg, #2344ef, #eef134);*/
+    background: #ABEDEB;
+}
+
+header {
+    height: 10vh;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-sign, .list-reg {
+    display: inline;
+    list-style: none;
+}
+
+.list-sign a, .list-reg a, .logo {
+    text-decoration: none;
+    color: var(--txt);
+}
+
+.logo {
+    font-weight: bolder;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.list-reg a {
+    background: var(--txt);
+    padding: 8px 20px;
+    border-radius: 35px;
+    color: #fff;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    
+}
+
+.welcome {
+    margin-right: 30px;
+    max-width: 50%;
+}
+
+.desc {
+    font-size: 50px;
+    color: var(--txt);
+}
+.desc span {
+    color: var(--span);
+}
+
+.text {
+    padding-top: 15px;
+}
+
+.form {
+    height: fit-content;
+    min-width: 50%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    display: none;
+}
+
+.block {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 25px;
+    border: none;
+    outline-color: #83ADE1;
+    border-radius: 5px;
+    background: #f1fff1;
+}
+
+button {
+    padding: 8px 20px;
+    background: var(--txt);
+    color: #fff;
+    border-radius: 35px;
+    position: relative;
+    float: right;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.or {
+    clear: both;
+    text-align: center;
+    padding: 10px;
+}
+.or::before {
+    content: "";
+    height: 1px;
+    width: 50px;
+    background: var(--txt);
+    display: inline-block;
+    align-self: center
+}
+
+.or::after {
+    content: "";
+    height: 1px;
+    width: 50px;
+    background: var(--txt);
+    display: inline-block;
+    align-self: center
+}
+
+p {
+    color: #275137;
+}
+
+p .list-sign, p .list-reg, .forget {
+    color: var(--span);
+}
+
+/*================(mdeia query)=================*/
+@media(max-width: 768px) {
+    .form {
+        height: fit-content;
+        min-width: 100%;
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        display: block;
+        position: absolute;
+        top: 0;
+    }
+    main {
+        display: block;
+    }
+    .welcome {
+        max-width: 100%;
+        margin-right: 0;
+    }
+}

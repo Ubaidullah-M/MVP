@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register and login site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <h1 class="logo" id="logo">ourLogo</h1>
+        <ul class="lists" id="list-menu">
+            <li class="list-sign"><a href="#">login</a></li>
+            <li class="list-reg"><a href="#">Register</a></li>
+        </ul>
+    </header>
+   <main>
+        <div class="welcome">
+            <h1 class="desc">Hi<span>!</span> Welcome to our page</h1>
+            <p class="text">We are trying to showcase the coding skills we have by making this simple project.</p>
+            <p class="text">try the login or Register button to explore the page.</p>
+        </div>
+        <form action="" class="form" id="Registration">
+            <input type="text" placeholder="email" class="block">
+            <input type="text" placeholder="Confirm email" class="block">
+            <input type="password" placeholder="password" class="block">
+            <input type="password" placeholder="Confirm password" class="block">
+            <button id="register">Register</button>
+            <p class="or">or</p>
+            <p class="alt">Already have an account? <a href="#" class="list-sign">Sign in</a> here.</p>
+        </form>
+        <form action="" class="form" id="signing">
+            <input type="text" placeholder="email" class="block">
+            <input type="password" placeholder="password" class="block">
+            <button id="login">Login</button>
+            <a href="#" class="forget">forget password</a>
+            <p class="or">or</p>
+            <p class="alt">Don't have an account? <a href="#" class="list-reg">Register</a> here.</p>
+        </form>
+        <form action="" class="form" id="reset-password">
+            <input type="text" placeholder="email" class="block">
+            <button id="Reset">Reset</button>
+            <p>make sure you provide the email you registered with!</p>
+            <p class="or">or</p>
+            <p class="alt">Don't have an account? <a href="#" class="list-reg">Register</a> here.</p>
+        </form>
+   </main>
+   
+   <script src="index.js"></script>
+   <script src="try.js"></script>
+</body>
+</html>
