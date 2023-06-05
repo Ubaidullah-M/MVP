@@ -38,7 +38,7 @@ header {
 }
 
 .logo {
-    font-weight: bolder;
+    font-weight: 700;
     font-size: 2.5em;
     cursor: pointer;
 }
@@ -63,7 +63,7 @@ main {
 
 .welcome {
     margin-right: 30px;
-    max-width: 50%;
+    max-width: 50%;;
 }
 
 .desc {
@@ -76,6 +76,18 @@ main {
 
 .text {
     padding-top: 15px;
+    font-size: 1.2em;
+    color: var(--txt);
+}
+
+.cta {
+    background: var(--txt);
+    color: #fff;
+    padding: .5em 1em;
+    border-radius: .35em;
+    text-decoration: none;
+    position: relative;
+    top: 1.5em;
 }
 
 .form {
