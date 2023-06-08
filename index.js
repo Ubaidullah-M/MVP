@@ -15,10 +15,18 @@ let list = document.querySelector("#list-menu")
 
 menu.addEventListener("click", function() {
     list.classList.add("mobile")
+    RegForm.style.display = "none";
+    logInForm.style.display = "none";
+    resetPassword.style.display = "none";
+    body.style.background = "rgba(0,0,0,0.25)"
 })
 
 close.addEventListener("click", function() {
     list.classList.remove("mobile")
+    RegForm.style.display = "none";
+    logInForm.style.display = "none";
+    resetPassword.style.display = "none";
+    body.style.background = "rgba(0,0,0,0)"
 })
 
 
@@ -28,6 +36,7 @@ for (x of logIn) {
         logInForm.style.display = "block";
         resetPassword.style.display = "none";
         RegForm.style.transition = ".5s ease-out"
+        list.classList.remove("mobile")
         body.style.background = "rgba(0,0,0,0.25)"
     });
 }
@@ -38,6 +47,7 @@ for (x of Reg) {
         logInForm.style.display = "none";
         resetPassword.style.display = "none";
         body.style.background = "rgba(0,0,0,0.25)"
+        list.classList.remove("mobile")
     });
 }
 
@@ -47,6 +57,7 @@ forgetPassword.addEventListener('click', () => {
     logInForm.style.display = "none";
     resetPassword.style.display = "block";
     body.style.background = "rgba(0,0,0,0.25)"
+    list.classList.remove("mobile")
 });
 
 ourLogo.addEventListener('click', function () {

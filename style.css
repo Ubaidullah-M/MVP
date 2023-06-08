@@ -78,6 +78,10 @@ header {
     transition: .3s ease-out;
 }
 
+ul li a:hover {
+    text-decoration: underline;
+}
+
 .list-reg:hover, .cta:hover {
     opacity: .4;
     box-shadow: 0,10px,1px,3px,#1F5A96;
