@@ -96,13 +96,14 @@ main {
     justify-content: space-between;
     position: absolute;
     left: 10%;
-    top: 30%;
+    top: 50%;
+    transform: translateY(-50%);
     
 }
 
 .welcome {
     margin-right: 30px;
-    max-width: 50%;;
+    /* max-width: 70%;; */
 }
 
 .desc {
@@ -136,6 +137,7 @@ main {
     width: 20em;
     border-radius: 3em;
     border: 3px solid var(--txt);
+    order: 2;
 }
 
 /* ===========form style section============ */
@@ -232,15 +234,12 @@ p .list-sign, p .list-reg, .forget {
         transform: translate(-50%, -50%);
     }
     main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        display: block;
+        /* top: 20%; */
     }
     .welcome {
         max-width: 100%;
         margin-right: 0;
-        order: 2;
     }
     .welcome h1 {
         font-size: 3em;
@@ -253,6 +252,9 @@ p .list-sign, p .list-reg, .forget {
 
     .image {
         width: 40%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .clippy {
