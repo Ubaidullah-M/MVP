@@ -53,7 +53,7 @@ header {
 }
 /*==========hidding style above============= */
 
-.list-sign, .list-reg, .about, .home {
+.sign, .reg, .about, .home {
     display: inline;
     list-style: none;
     margin-left: 1em;
@@ -171,7 +171,7 @@ main {
     border: none;
     outline-color: #83ADE1;
     border-radius: 5px;
-    background: #f1fff1;
+    background: rgb(247, 247, 250);
 }
 
 button {
