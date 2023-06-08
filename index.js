@@ -11,6 +11,7 @@ let body = document.querySelector("body")
 let menu = document.querySelector("#menu")
 let close = document.querySelector("#close")
 let list = document.querySelector("#list-menu")
+let cta = document.querySelector(".cta")
 
 
 menu.addEventListener("click", function() {
@@ -50,6 +51,14 @@ for (x of Reg) {
         list.classList.remove("mobile")
     });
 }
+
+cta.addEventListener('click', () => {
+    RegForm.style.display = "block";
+    logInForm.style.display = "none";
+    resetPassword.style.display = "none";
+    body.style.background = "rgba(0,0,0,0.25)"
+    list.classList.remove("mobile")
+});
 
 
 forgetPassword.addEventListener('click', () => {
