@@ -2,8 +2,8 @@
 
 
 :root {
-    --txt: #1F5A96;
-    --bg: #ABEDEB;
+    --txt: rgb(31, 91, 150);
+    --bg: #365ad3;
     --span: #ff12ed;
 }
 * {
@@ -21,17 +21,23 @@ body {
     background: #fff;
 }
 
-.image {
+/* bg clippy */
+
+.clippy {
+    clip-path: polygon(82% 74%, 100% 0, 100% 100%, 0% 100%);
+    background: var(--bg);
+    width: 100%;
+    height: 100vh;
     position: absolute;
-    top: 25%;
-    right: 20%;
-    width: 13em;
-    border-radius: 3em;
-    border: 3px solid var(--txt);
+
 }
 
+/* ==============header style scetion=============== */
+
+
+
 header {
-    height: 10vh;
+    /* height: 10vh; */
     display: flex;
     width: 80%;
     margin: 0 auto;
@@ -39,13 +45,21 @@ header {
     justify-content: space-between;
 }
 
-.list-sign, .list-reg, .about {
+/* =========hidding the menu/cancel button===== */
+#menu, #close {
+    display: none;
+    color: var(--txt);
+    font-size: 1.5em;
+}
+/*==========hidding style above============= */
+
+.list-sign, .list-reg, .about, .home {
     display: inline;
     list-style: none;
     margin-left: 1em;
 }
 
-.list-sign a, .list-reg a, .logo, .about a {
+.list-sign a, .list-reg a, .logo a, .about a, .home a {
     text-decoration: none;
     color: var(--txt);
 }
@@ -56,17 +70,25 @@ header {
     cursor: pointer;
 }
 
-.list-reg {
+.list-reg, .cta {
     background: var(--txt);
     padding: 8px 20px;
     border-radius: 35px;
     color: #fff;
+    transition: .3s ease-out;
+}
+
+.list-reg:hover, .cta:hover {
+    opacity: .4;
+    box-shadow: 0,10px,1px,3px,#1F5A96;
 }
 
 .list-reg a {
     color: #fff;
 }
 
+
+/* ============main style scetion============== */
 main {
     width: 80%;
     margin: 0 auto;
@@ -101,19 +123,38 @@ main {
     background: var(--txt);
     color: #fff;
     padding: .5em 1em;
-    border-radius: .35em;
+    /* border-radius: .35em; */
     text-decoration: none;
     position: relative;
     top: 1.5em;
+    margin-left: 0;
+    transition: .3s ease-out;
+}
+ 
+
+.image {
+    width: 20em;
+    border-radius: 3em;
+    border: 3px solid var(--txt);
 }
 
+/* ===========form style section============ */
 .form {
+    position: absolute;
+    top: 25%;
+    right: 20%;
     height: fit-content;
     min-width: 50%;
     background: #fff;
     padding: 30px;
     border-radius: 8px;
     display: none;
+}
+
+.form-reg {
+    background: inherit;
+    padding: 0;
+    margin: 0;
 }
 
 .block {
@@ -171,22 +212,93 @@ p .list-sign, p .list-reg, .forget {
 }
 
 /*================(mdeia query)=================*/
-@media(max-width: 768px) {
+@media(max-width: 800px) {
+    header {
+        padding-top: .5em;
+    }
+    .logo {
+        font-size: 2em;
+    }
     .form {
         height: fit-content;
-        min-width: 100%;
+        width: 90%;
         background: #fff;
         padding: 30px;
         border-radius: 8px;
-        display: block;
+        display: none;
         position: absolute;
-        top: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     main {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .welcome {
         max-width: 100%;
         margin-right: 0;
+        order: 2;
+    }
+    .welcome h1 {
+        font-size: 3em;
+        margin-top: 1em;
+    }
+
+    .welcome p {
+        font-size: 1em;
+    }
+
+    .image {
+        width: 40%;
+    }
+
+    .clippy {
+        display: none;
+    }
+    /* ====menu styling===== */
+    .lists {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    #close {
+        color: #fff;
+        display: block;
+    }
+
+    .mobile {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        background: rgba(31, 91, 150, .85);
+        display: block;
+        width: 70vw;
+        z-index: 1000;
+        color: #fff;
+        padding: 20px 30px;
+        transition: .3s ease-in
+    }
+
+    #list-menu li a {
+        color: #fff;
+    }
+    #list-menu li {
+        display: block;
+        margin: 2em 0;
+        border-bottom: 1px solid var(--txt);
+        /* width: 100%; */
+    }
+
+    .list-reg {
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
     }
 }
